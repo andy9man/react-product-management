@@ -7,6 +7,8 @@ import {
 import Nav from './components/Nav';
 import Home from './views/Home';
 import ProductList from './views/ProductList';
+import ProductEdit from './views/ProductEdit';
+import ProductAdd from './views/ProductAdd';
 
 class App extends Component {
   render() {
@@ -23,7 +25,10 @@ class App extends Component {
             <div className="margin-horiz-xlarge small-12 medium-10 medium-centered columns">
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/productlist' component={ProductList} />
+                <Route exact path='/products' component={ProductList} />
+                <Route path='/products/edit/:id' component={ProductEdit} />
+                <Route path='/products/new' component={ProductAdd} />
+                
                 {/* <Route path='/sell' component={Sell} />
                 <Route path='/ledger' component={Ledger} />
                 <Route path='/transaction' component={Transaction} /> */}
