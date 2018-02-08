@@ -38,7 +38,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return{
         handleAddProduct(product){
-            dispatch(addProduct)(product)
+            // dispatch(addProduct)(product)
         }
 
     }

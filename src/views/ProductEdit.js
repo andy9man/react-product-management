@@ -13,16 +13,16 @@ class ProductEdit extends Component {
         console.log(this.props)
         return <div>
             <h1>Edit Product</h1>
-            <input id="title" type="text" value={this.state.title} className={this.state.error && "has-error"} onInput={e => this.setState(
+            <input id="title" type="text" value={this.state.title} className={this.state.error && "has-error"} onChange={e => this.setState(
                   { title: e.target.value }
                 )} />
             <label htmlFor="title">Title</label>
 
-            <input id="price" type="text" value={this.state.price} className={this.state.error && "has-error"} onInput={e => this.setState(
+            <input id="price" type="text" value={this.state.price} className={this.state.error && "has-error"} onChange={e => this.setState(
                   { price: e.target.value }
                 )} />
             <label htmlFor="price">Price</label>
-            <input id="image" type="text" value={this.state.image} className={this.state.error && "has-error"} onInput={e => this.setState(
+            <input id="image" type="text" value={this.state.image} className={this.state.error && "has-error"} onChange={e => this.setState(
                   { image: e.target.value }
                 )} />
             <label htmlFor="image">Image</label>
