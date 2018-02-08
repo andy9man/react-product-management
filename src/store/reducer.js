@@ -1,17 +1,18 @@
-//import { ADD_COIN, SELL_COIN, MINE_COIN } from './actions'
+import { LOAD_DATA } from './actions'
 
 
 class Product {
-    constructor(title, price, image) {
+    constructor(title, price, image, id) {
         this.title = title;
         this.price = price;
         this.image = image;
+        this.id = id;
     }
 }
 const initialState = {
     products: [
-        new Product("DSLR Camera", "99.99", ""),
-        new Product("Laptop", "1999.99", ""),
+        // new Product("DSLR Camera", "99.99", "", "1"),
+        // new Product("Laptop", "1999.99", "", "2"),
     ]
 }
 
@@ -24,7 +25,13 @@ const CreateUid = () => {
 
 export const reducer = (state = initialState, action) => {
     switch(action.type){
-
+        case LOAD_DATA:
+            // const products = action.payload.result.map(product => new Product(product));
+            return {
+                ...state,
+                products: action.payload,
+                loadingData: false
+            };
         default:
             return state
     }

@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { getProducts } from '../store/actions';
 
+class ProductList extends Component {
 
-const ProductList = props => {
-    const {products} = props;
-    const haveProducts = products.length > 0;
-    return (
-        <div>
-            <h1>Product List</h1>
+    componentDidMount(){
+        console.log("Attempting to load users...");
+        this.props.appGetProducts();
+    }
 
-            {
-                haveProducts ?
-                    products.map( product => (
-                        <li>
-                            {product.title}
-                        </li>
-                    ))
-                :
+    render() {
+        console.log(this.props.products)
+        const haveProducts = this.props.products.length > 0;
+        return (
+            <div>
+                <h1>Product List</h1>
+                {haveProducts ?
+                    this.props.products.map((product, idx) => (
+                        <li key={idx}>{product.title}</li>
+                    )) :
                     <h3>There are no products to display</h3>
-
-            }
-        </div>
-    )
+                }
+            </div>
+        )
+    }
 }
 
 const mapStateToProps = (state) => {
@@ -30,4 +32,12 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(ProductList)
+const getDispatchFromReduxToAppComponentAsProps = (dispatch) => {
+    return {
+        appGetProducts() {
+            dispatch(getProducts());
+        },
+    }
+}
+
+export default connect(mapStateToProps, getDispatchFromReduxToAppComponentAsProps)(ProductList)

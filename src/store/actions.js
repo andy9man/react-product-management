@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = '';
+export const API_URL = 'http://5a7c93eb4c1e2d00124a5e32.mockapi.io/api/v1/products';
 export const UPDATE_VIEW = 'UPADTE_VIEW';
 
 export const LOAD_DATA = 'LOAD_DATA_SUCCESS';
@@ -30,8 +30,8 @@ export const getProducts = () => {
     console.log(`Getting Product Data... ${url}`);
 
     axios.get(`${url}`)
-      .then( ({data: Products}) => {
-        setTimeout( () => { dispatch( dataResultHandler(LOAD_DATA, 'Products', Products) ) }, 1);
+      .then( ({data: products}) => {
+        setTimeout( () => { dispatch( {type: LOAD_DATA, payload: products} ) }, 1);
       })
       .catch( error => {
         if (error.response) {
