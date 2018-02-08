@@ -1,7 +1,18 @@
 //import { ADD_COIN, SELL_COIN, MINE_COIN } from './actions'
 
-const initialState = {
 
+class Product {
+    constructor(title, price, image) {
+        this.title = title;
+        this.price = price;
+        this.image = image;
+    }
+}
+const initialState = {
+    products: [
+        new Product("DSLR Camera", "99.99", ""),
+        new Product("Laptop", "1999.99", ""),
+    ]
 }
 
 const CreateUid = () => {
