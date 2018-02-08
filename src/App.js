@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Navigation} from './components/Nav';
-import Home from './views/Home';
-import Mine from './views/Mine';
-import Buy from './views/Buy';
-import Sell from './views/Sell';
-import Ledger from './views/Ledger';
-import Transaction from './views/Transaction';
 import {
   Switch,
   Route
@@ -16,7 +9,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <header className="margin-vert-large margin-horiz-large">
+          <h1>PPM - Project Product Management</h1>
+          ::NAV::
+        </header>
 
+        <div className="margin-horiz-large card">
+
+          SOME STUFF HERE
+        </div>
 
       </div>
     );
