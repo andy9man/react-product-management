@@ -15,10 +15,11 @@ class ProductAdd extends Component {
     }
 
     render(){
-
+        console.log("Create new product...");
         return(
             <div>
                 <h1>Create a New Product</h1>
+
                 <div className="margin-top-medium margin-horiz-small">
                     <form onSubmit={
                         (e) => {
@@ -46,10 +47,14 @@ class ProductAdd extends Component {
                         <div className="row">
                             <div className="small-12 medium-8 large-6 columns">
                                 <div className="md-text-field with-floating-label">
-                                    <input id='image' type='text' onInput={(e) => this.setState({imageUrl: e.target.value})} />
+                                    <input id='image' type='text' onInput={(e) => this.setState({image: e.target.value})} />
                                     <label htmlFor='image'>Image URL</label>
-                                    <button className='button btn-cta' >Add</button>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="small-12 medium-8 large-6 columns">
+                                <button className='button btn-cta' >Add</button>
                             </div>
                         </div>
                     </form>
