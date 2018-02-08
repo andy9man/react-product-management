@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import Product from '../components/Product'
 
 
 const ProductList = props => {
@@ -12,9 +13,7 @@ const ProductList = props => {
             {
                 haveProducts ?
                     products.map( product => (
-                        <li>
-                            {product.title}
-                        </li>
+                        <Product item={product} />
                     ))
                 :
                     <h3>There are no products to display</h3>
