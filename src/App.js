@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import Home from './views/Home';
 import ProductList from './views/ProductList';
 import ProductEdit from './views/ProductEdit';
+import ProductAdd from './views/ProductAdd';
 
 class App extends Component {
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/products' component={ProductList} />
                 <Route path='/products/edit/:id' component={ProductEdit} />
-                <Route path='/create' component={ProductEdit} />
+                <Route path='/products/new' component={ProductAdd} />
                 
                 {/* <Route path='/sell' component={Sell} />
                 <Route path='/ledger' component={Ledger} />
