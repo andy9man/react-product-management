@@ -10,8 +10,8 @@ class Product {
 }
 const initialState = {
     products: [
-        new Product("DSLR Camera", "99.99", ""),
-        new Product("Laptop", "1999.99", ""),
+        new Product("DSLR Camera", "99.99", "https://static.buydig.com/Assets/Product/imagesnw400/CFDB35FDD805452E9F5A3A43CA900FD8.jpg"),
+        new Product("Laptop", "1999.99", "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/m/ac/macbook/select/macbook-select-space-gray-201706?wid=452&hei=420&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1505775431709"),
     ]
 }
 
