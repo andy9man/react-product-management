@@ -58,7 +58,7 @@ export const getProducts = () => {
   }
 }
 
-export const editProduct = (ProductObj, ProductId) => {
+export const editProduct = (ProductId, ProductObj) => {
   return (dispatch, getState, url) => {
     console.log(`Updating Product... ${ProductId}`);
     console.log(ProductObj);
@@ -90,13 +90,13 @@ export const editProduct = (ProductObj, ProductId) => {
   }
 }
 
-export const deleteProduct = (ProductId, callGetProducts) => {
+export const deleteProduct = (ProductId) => {
   return (dispatch, getState, url) => {
     console.log(`Deleting Product... ${ProductId}`);
     axios.delete(`${url}/${ProductId}`)
       .then( (response) => {
         dispatch( {type: DATA_STATUS_HANDLER, payload: {type: 'deleteProductsuccess', result: true}} );
-        callGetProducts && dispatch( getProducts() );
+        //callGetProducts && dispatch( getProducts() );
       })
       .catch( error => {
         if (error.response) {
