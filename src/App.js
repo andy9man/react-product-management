@@ -22,16 +22,12 @@ class App extends Component {
         <div className="margin-horiz-large card">
           <div className="row">
 
-            <div className="margin-horiz-xlarge small-12 medium-10 medium-centered columns">
+            <div className="margin-horiz-small small-12 medium-12 small-centered medium-centered columns">
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/products' component={ProductList} />
                 <Route path='/products/edit/:id' component={ProductEdit} />
-                <Route path='/products/new' component={ProductAdd} />
-                
-                {/* <Route path='/sell' component={Sell} />
-                <Route path='/ledger' component={Ledger} />
-                <Route path='/transaction' component={Transaction} /> */}
+                <Route exact path='/products/new' component={ProductAdd} />
               </Switch>
             </div>
 
