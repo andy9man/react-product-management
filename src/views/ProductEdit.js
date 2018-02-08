@@ -4,12 +4,13 @@ import {connect} from 'react-redux'
 class ProductEdit extends Component {
     constructor (props){
         super (props)
-        const {id}=props.match.params
+        const {id}=this.props.match.params
         
-        this.state = props.products.find(item => item.id === id )
+        this.state = this.props.products.find(item => item.id === id )
 
     }
     render(){
+        console.log(this.props)
         return <div>
             <h1>Edit Product</h1>
             <input id="title" type="text" value={this.state.title} className={this.state.error && "has-error"} onInput={e => this.setState(

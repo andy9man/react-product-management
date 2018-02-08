@@ -8,11 +8,11 @@ const Product = props => {
             <img src={item.image}/>
             <h3>{item.title}</h3>
             <div>${item.price}</div>
-            <Link to={`/productlist/edit/${item.id}`}><button>Edit</button></Link>
+            <Link to={`/products/edit/${item.id}`}><button>Edit</button></Link>
             <button>Delete</button> 
         </div>
 
-        <Route `${props.match.path}/edit/:id`
+
     )
 }
 

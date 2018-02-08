@@ -6,7 +6,7 @@ const Nav = props => {
         <nav>
             <ul className="tabs padding-bottom-medium">
                 <CustomNav to='/' label='Home' generalClassName="tab-title" activeOnlyWhenExact={true} />
-                <CustomNav to='/productlist' label='Product List' generalClassName="tab-title" activeOnlyWhenExact={true} />
+                <CustomNav to='/products' label='Product List' generalClassName="tab-title" activeOnlyWhenExact={true} />
             </ul>
         </nav>
     )
