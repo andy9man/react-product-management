@@ -22,7 +22,8 @@ const initialState = {
         // new Product("DSLR Camera", "99.99", "", "1"),
         // new Product("Laptop", "1999.99", "", "2"),
     ],
-deleteProductsuccess: false
+    deleteProductSuccess: false,
+    editProductSuccess: false
 }
 
 
@@ -38,9 +39,8 @@ export const reducer = (state = initialState, action) => {
         case DATA_STATUS_HANDLER:
             return { ...state, [action.payload.type]: action.payload.result, displayAlert: action.payload.result};
 
-            default:
-            return state
-
+        default:
+            return state;
     }
 
 

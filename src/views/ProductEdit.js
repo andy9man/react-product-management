@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {editProduct, deleteProduct} from '../store/actions';
-import {Redirect} from 'react-router-dom';
 class ProductEdit extends Component {
     constructor (props){
         super(props)
@@ -11,9 +9,10 @@ class ProductEdit extends Component {
     }
 
     render() {
+
+        (this.props.deleteProductSuccess || this.props.editProductSuccess) && this.props.history.push("/products");
         return (
             <div>
-                {this.props.editProductSuccess && <Redirect to ='/products'/>}
                 <h1>Edit Product</h1>
 
                 {this.state ?
