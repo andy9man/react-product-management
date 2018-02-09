@@ -20,7 +20,7 @@ class ProductAdd extends Component {
             <div>
                 <h1>Create a New Product</h1>
 
-                <div className="margin-top-medium margin-horiz-small">
+                <div className="margin-top-medium margin-horiz-large">
                     <form onSubmit={
                         (e) => {
                             e.preventDefault();

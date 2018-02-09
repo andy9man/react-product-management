@@ -1,20 +1,21 @@
 import { LOAD_DATA } from './actions'
 
-const CreateUid = () => {
-    // Math.random should be unique because of its seeding algorithm.
-    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-    // after the decimal.
-    return Math.random().toString(36).substr(2, 15);
- };
+// const CreateUid = () => {
+//     // Math.random should be unique because of its seeding algorithm.
+//     // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+//     // after the decimal.
+//     return Math.random().toString(36).substr(2, 15);
+//  };
 
-class Product {
-    constructor(title, price, image, id) {
-        this.title = title;
-        this.price = price;
-        this.image = image;
-        this.id = id;
-    }
-}
+// class Product {
+//     constructor(title, price, image, id) {
+//         this.title = title;
+//         this.price = price;
+//         this.image = image;
+//         this.id = id;
+//     }
+// }
+
 const initialState = {
     products: [
         // new Product("DSLR Camera", "99.99", "", "1"),
