@@ -10,11 +10,7 @@ const Product = props => {
             <img src={item.image} alt={item.title} className="product-image"/>
             <h3>{item.title}</h3>
             <div>${item.price}</div>
-<<<<<<< HEAD
             <ul className="button-group btn-cta tiny margin-top-medium">
-=======
-            <ul className="button-group btn-cta tiny">
->>>>>>> 972281d3240e0502d2848c07c6577f91a393711c
                 <li><Link to={`/products/edit/${item.id}`}><button className="button btn-cta">Edit</button></Link></li>
                 <li><button className="button btn-cta alert" onClick={() => {
                     props.handleDeleteProduct(item.id);
