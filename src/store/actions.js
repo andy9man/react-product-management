@@ -9,6 +9,7 @@ export const DATA_STATUS_HANDLER = 'DATA_STATUS_HANDLER';
 
 
 
+
 export const updateView = (view) => {
   return {type: UPDATE_VIEW, payload: view}
 }
@@ -64,7 +65,7 @@ export const editProduct = (ProductId, ProductObj) => {
     console.log(ProductObj);
     axios.put(`${url}/${ProductId}`, ProductObj)
       .then( (response) => {
-        dispatch( {type: DATA_STATUS_HANDLER, payload: {type: 'editProductsuccess', result: true}} );
+        dispatch( {type: DATA_STATUS_HANDLER, payload: {type: 'editProductSuccess', result: true}} );
       })
       .catch( error => {
         if (error.response) {
@@ -95,7 +96,7 @@ export const deleteProduct = (ProductId) => {
     console.log(`Deleting Product... ${ProductId}`);
     axios.delete(`${url}/${ProductId}`)
       .then( (response) => {
-        dispatch( {type: DATA_STATUS_HANDLER, payload: {type: 'deleteProductsuccess', result: true}} );
+        dispatch( {type: DATA_STATUS_HANDLER, payload: {type: 'deleteProductSuccess', result: true}} );
         //callGetProducts && dispatch( getProducts() );
       })
       .catch( error => {

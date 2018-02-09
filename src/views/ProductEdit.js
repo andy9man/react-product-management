@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {editProduct, deleteProduct} from '../store/actions';
-
+import {Redirect} from 'react-router-dom';
 class ProductEdit extends Component {
     constructor (props){
         super(props)
@@ -13,6 +13,7 @@ class ProductEdit extends Component {
     render() {
         return (
             <div>
+                {this.props.editProductSuccess && <Redirect to ='/products'/>}
                 <h1>Edit Product</h1>
 
                 {this.state ?
@@ -95,7 +96,9 @@ class ProductEdit extends Component {
 
 const mapStateToProps = state => {
     return{
-        products: state.products
+        products: state.products,
+        deleteProductSuccess: state.deleteProductSuccess,
+        editProductSuccess: state.editProductSuccess
     }
 }
 

@@ -44,14 +44,14 @@
   {
     "id": "10",
     "createdAt": 1518122815,
-    "title": "title 10",
+    "title": "PC Case",
     "image": "https://images10.newegg.com/NeweggImage/productimage/11-854-068-V14.jpg",
     "price": "89.59"
   },
   {
     "id": "11",
     "createdAt": 1518122755,
-    "title": "title 11",
+    "title": "Graphics Card",
     "image": "https://images10.newegg.com/ProductImageCompressAll1280/14-126-122-S99.jpg",
     "price": "58.00"
   },
