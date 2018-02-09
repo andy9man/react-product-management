@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
+import {editProduct, deleteProduct} from '../store/actions';
 class ProductEdit extends Component {
     constructor (props){
         super(props)
