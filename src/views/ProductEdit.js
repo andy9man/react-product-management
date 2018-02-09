@@ -48,15 +48,21 @@ class ProductEdit extends Component {
                 />
                 <label htmlFor="image">Image</label>
                 </div>
-                <button className='button btn-cta' onClick={() => {
-                        this.props.handleEditProduct(
-                            this.state.id,
-                            {title: this.state.title, price: this.state.price, image: this.state.image}
-                        )
-                }}>Update</button>
-                <button className='button btn-cta alert' onClick={ () => {
-                    this.props.handleDeleteProduct(this.state.id);
-                }}>Delete</button>
+                <ul class="button-group btn-cta tiny">
+                    <li>
+                        <button className='button btn-cta' onClick={() => {
+                                this.props.handleEditProduct(
+                                    this.state.id,
+                                    {title: this.state.title, price: this.state.price, image: this.state.image}
+                                )
+                        }}>Update</button>
+                    </li>
+                    <li>
+                        <button className='button btn-cta alert' onClick={ () => {
+                            this.props.handleDeleteProduct(this.state.id);
+                        }}>Delete</button>
+                    </li>
+                </ul>
             </div>
         )
     }

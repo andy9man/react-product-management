@@ -11,8 +11,8 @@ const Product = props => {
             <h3>{item.title}</h3>
             <div>${item.price}</div>
             <ul class="button-group btn-cta tiny">
-                <li><Link to={`/products/edit/${item.id}`}><button>Edit</button></Link></li>
-                <li><button className="alert" onClick={() => {
+                <li><Link to={`/products/edit/${item.id}`}><button className="button btn-cta">Edit</button></Link></li>
+                <li><button className="button btn-cta alert" onClick={() => {
                     props.handleDeleteProduct(item.id);
                 }}>Delete</button></li>
             </ul>
