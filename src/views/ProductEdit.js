@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {editProduct, deleteProduct} from '../store/actions';
-
+import {Redirect} from 'react-router-dom';
 class ProductEdit extends Component {
     constructor (props){
         super(props)
@@ -13,6 +13,7 @@ class ProductEdit extends Component {
     render() {
         return (
             <div>
+                {this.props.editProductSuccess && <Redirect to ='/products'/>}
                 <h1>Edit Product</h1>
                 <div className="md-text-field with-floating-label">
                 <input
@@ -60,6 +61,7 @@ class ProductEdit extends Component {
                     <li>
                         <button className='button btn-cta alert' onClick={ () => {
                             this.props.handleDeleteProduct(this.state.id);
+
                         }}>Delete</button>
                     </li>
                 </ul>
@@ -71,7 +73,9 @@ class ProductEdit extends Component {
 
 const mapStateToProps = state => {
     return{
-        products: state.products
+        products: state.products,
+        deleteProductSuccess: state.deleteProductSuccess,
+        editProductSuccess: state.editProductSuccess
     }
 }
 

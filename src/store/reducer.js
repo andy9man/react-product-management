@@ -1,4 +1,4 @@
-import { LOAD_DATA } from './actions'
+import { LOAD_DATA, DATA_STATUS_HANDLER } from './actions'
 
 const CreateUid = () => {
     // Math.random should be unique because of its seeding algorithm.
@@ -6,6 +6,8 @@ const CreateUid = () => {
     // after the decimal.
     return Math.random().toString(36).substr(2, 15);
  };
+
+ 
 
 class Product {
     constructor(title, price, image, id) {
@@ -17,9 +19,11 @@ class Product {
 }
 const initialState = {
     products: [
+    
         // new Product("DSLR Camera", "99.99", "", "1"),
         // new Product("Laptop", "1999.99", "", "2"),
-    ]
+    ],
+deleteProductsuccess: false
 }
 
 
@@ -32,8 +36,13 @@ export const reducer = (state = initialState, action) => {
                 products: action.payload,
                 loadingData: false
             };
-        default:
+        case DATA_STATUS_HANDLER:
+            return { ...state, [action.payload.type]: action.payload.result, displayAlert: action.payload.result};
+        
+            default:
             return state
+
     }
+
 
 }
