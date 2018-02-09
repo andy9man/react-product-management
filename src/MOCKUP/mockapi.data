@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "createdAt": 1518123355,
+    "title": "Laptop",
+    "image": "http://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05474005.png",
+    "price": 1999.99
+  },
+  {
+    "id": "2",
+    "createdAt": 1518123295,
+    "title": "DSLR Camera",
+    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/en_US/images/abn/2015/cam/pr/140513-dslr-cat-conv/140513-topper-save-canon-dslr.jpg;maxHeight=309;maxWidth=457",
+    "price": 599.99
+  },
+  {
+    "id": "3",
+    "createdAt": 1518123235,
+    "title": "Gaming Keyboard",
+    "image": "https://images10.newegg.com/NeweggImage/ProductImage/23-816-107-V01.jpg?ex=2",
+    "price": "29.00"
+  },
+  {
+    "id": "5",
+    "createdAt": 1518123115,
+    "title": "Champion Laptop",
+    "image": "https://images10.newegg.com/NeweggImage/ProductImageCompressAll1280/1TS-001A-00997-V01.jpg",
+    "price": "749.99"
+  },
+  {
+    "id": "6",
+    "createdAt": 1518123055,
+    "title": "PS4 Battlefront Edition",
+    "image": "https://images10.newegg.com/NeweggImage/ProductImageCompressAll1280/68-110-258-01.jpg",
+    "price": "399.99"
+  },
+  {
+    "id": "7",
+    "createdAt": 1518122995,
+    "title": "Corsair Gaming Mouse",
+    "image": "https://images10.newegg.com/ProductImageCompressAll1280/26-104-674-15.jpg",
+    "price": "46.99"
+  },
+  {
+    "id": "10",
+    "createdAt": 1518122815,
+    "title": "title 10",
+    "image": "https://images10.newegg.com/NeweggImage/productimage/11-854-068-V14.jpg",
+    "price": "89.59"
+  },
+  {
+    "id": "11",
+    "createdAt": 1518122755,
+    "title": "title 11",
+    "image": "https://images10.newegg.com/ProductImageCompressAll1280/14-126-122-S99.jpg",
+    "price": "58.00"
+  },
+  {
+    "id": "12",
+    "createdAt": 1518122695,
+    "title": "VFT Bluedio",
+    "image": "https://images10.newegg.com/NeweggImage/ProductImageCompressAll1280/A3SJ_131545124191770528bA8ulIAwz4.jpg",
+    "price": "299.99"
+  },
+  {
+    "id": "13",
+    "createdAt": 1518122635,
+    "title": "MSI Laptop",
+    "image": "https://images10.newegg.com/NeweggImage/ProductImageCompressAll1280/34-154-734-V11.jpg",
+    "price": "599.89"
+  },
+  {
+    "id": "14",
+    "createdAt": 1518122575,
+    "title": "title 14",
+    "image": "image 14",
+    "price": 76
+  },
+  {
+    "id": "15",
+    "createdAt": 1518122515,
+    "title": "title 15",
+    "image": "image 15",
+    "price": 87
+  }
+]

@@ -47,8 +47,8 @@ class ProductAdd extends Component {
                         <div className="row">
                             <div className="small-12 medium-8 large-6 columns">
                                 <div className="md-text-field with-floating-label">
-                                    <input id='image' type='text' onInput={(e) => this.setState({image: e.target.value})} />
-                                    <label htmlFor='image'>Image URL</label>
+                                    <input id='image1' type='text' onInput={(e) => this.setState({image: e.target.value})} required />
+                                    <label htmlFor='image1'>Image URL</label>
                                 </div>
                             </div>
                         </div>
